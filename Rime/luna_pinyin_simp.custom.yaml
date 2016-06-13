@@ -9,6 +9,17 @@ patch:
   # 载入自定义词库表
   "translator/dictionary": oott123_personal
 
+  punctuator:
+    import_preset: "luna_pinyin.extended/symbols"
+    symbols:
+      '/cry': ['😂', '🌚', '😅']
+      '/yy': ['_(:з」∠)_', '∑(๑º口º๑)!!']
+    half_shape:
+      '{': ['「', '『', '〖', '｛']
+      '}': ['」', '』', '〗', '｝']
+      '[': {commit: '【'}
+      ']': {commit: '】'}
+
   ## 明月拼音扩充词库设置 ##
   # via <https://github.com/zer4tul/RIME-Extend-Dict/blob/master/luna_pinyin.custom.yaml>
   # 載入朙月拼音擴充詞庫
@@ -20,5 +31,5 @@ patch:
   
   # 引入 symbols.yaml 文件，開啓輸入特殊符號功能，如有需求，取消註釋並重新部署即可。在Rime自帶的symbols.yaml的基礎上增加了少量內容。
   # 可輸入的具體內容參考symbols.yaml
-  "punctuator/import_preset": "luna_pinyin.extended/symbols"
+  # "punctuator/import_preset": "luna_pinyin.extended/symbols"
   "recognizer/patterns/punct": "^/[a-z]*$"
