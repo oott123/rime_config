@@ -30,20 +30,31 @@ patch:
       '|': {commit: '|'}
 
   
+  "recognizer/patterns/reverse_lookup": "u(b|e)[a-z]*'?$"
+
+  # 笔画输入
   "engine/translators/@after 1": reverse_lookup_translator@reverse_lookup_stroke
-  "reverse_lookup_stroke":
+  reverse_lookup_stroke:
     dictionary: stroke
     enable_completion: true
-    prefix: "ub"
+    prefix: ub
     suffix: "'"
     tips: '「笔画」'
     preedit_format:
       - xlit/hspnz/一丨丿丶乙/
     comment_format:
       - xform/([nl])v/$1ü/
-  "recognizer/patterns/reverse_lookup": "ub[hspnzd]*'?$"
 
-  "engine/translators/@after 2": table_translator@emoji_translator
+  # 表情输入
+  "engine/translators/@after 2": reverse_lookup_translator@reverse_lookup_emoji
+  reverse_lookup_emoji:
+    dictionary: emoji
+    enable_completion: true
+    prefix: ue
+    suffix: "'"
+    tips: '「表情」'
+
+  "engine/translators/@after 3": table_translator@emoji_translator
   emoji_translator:
     dictionary: emoji
     enable_completion: true
