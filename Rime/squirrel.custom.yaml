@@ -25,3 +25,11 @@ patch:
       hilited_candidate_label_color: 0xa0c98915
       hilited_candidate_text_color: 0xc98915
       hilited_candidate_back_color: 0xf5f5f5
+
+  app_options:
+    'com.runningwithcrayons.Alfred-3':
+      ascii_mode: true
+    'com.googlecode.iterm2':
+      ascii_mode: true
+    '2BUA8C4S2C.com.agilebits.onepassword4-helper':
+      ascii_mode: true
