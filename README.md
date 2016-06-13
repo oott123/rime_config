@@ -9,6 +9,7 @@
 * 采用 `ub` 开头输入笔画（h横s竖p撇n捺z折）
 * 采用 `ue` 开头输入 emoji （如 uefire -> 🔥)
 * emoji 也可直接和拼音混合输入 [参考符号表](https://raw.githubusercontent.com/rime/home/master/images/emoji-chart.png) （亦可输入英文如 fire -> 🔥）
+* 模糊音：en(g) in(g) z(h)
 
 ### 符号
 

@@ -59,6 +59,12 @@ patch:
     dictionary: emoji
     enable_completion: false
 
+  # 模糊音: en[g] in[g] z[h]
+  "speller/algebra/@after 1": derive/([ei])n$/$1ng/
+  "speller/algebra/@after 2": derive/([ei])ng$/$1n/
+  "speller/algebra/@after 3": derive/^([z])h/$1/
+  "speller/algebra/@after 4": derive/^([z])([^h])/$1h$2/
+
   ## 明月拼音扩充词库设置 ##
   # via <https://github.com/zer4tul/RIME-Extend-Dict/blob/master/luna_pinyin.custom.yaml>
   # 載入朙月拼音擴充詞庫
