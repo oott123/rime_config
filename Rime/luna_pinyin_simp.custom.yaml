@@ -19,6 +19,34 @@ patch:
       '}': ['」', '』', '〗', '｝']
       '[': {commit: '【'}
       ']': {commit: '】'}
+      '`': ['`', '·', '・']
+      # 去掉一些常用符号的列表
+      '#': {commit: '#'}
+      '*': {commit: '*'}
+      '=': {commit: '='}
+      '/': {commit: '/'}
+      '~': {commit: '~'}
+      '@': {commit: '@'}
+      '|': {commit: '|'}
+
+  
+  "engine/translators/@after 1": reverse_lookup_translator@reverse_lookup_stroke
+  "reverse_lookup_stroke":
+    dictionary: stroke
+    enable_completion: true
+    prefix: "ub"
+    suffix: "'"
+    tips: '「笔画」'
+    preedit_format:
+      - xlit/hspnz/一丨丿丶乙/
+    comment_format:
+      - xform/([nl])v/$1ü/
+  "recognizer/patterns/reverse_lookup": "ub[hspnzd]*'?$"
+
+  "engine/translators/@after 2": table_translator@emoji_translator
+  emoji_translator:
+    dictionary: emoji
+    enable_completion: true
 
   ## 明月拼音扩充词库设置 ##
   # via <https://github.com/zer4tul/RIME-Extend-Dict/blob/master/luna_pinyin.custom.yaml>
