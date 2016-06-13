@@ -1,8 +1,10 @@
 # encoding: utf-8
 
 patch:
-  "punctuator/import_preset": symbols
-  "recognizer/patterns/punct": "^/([a-z]+|[0-9])$"
+  # 左右 Shift 上屏英文
+  ascii_composer/switch_key:
+    Shift_L: commit_code
+    Shift_R: commit_code
 
   ## 明月拼音扩充词库设置 ##
   # via <https://github.com/zer4tul/RIME-Extend-Dict/blob/master/luna_pinyin.custom.yaml>
@@ -12,3 +14,8 @@ patch:
   # 改寫拼寫運算，使得含西文的詞彙（位於 luna_pinyin.cn_en.dict.yaml 中）不影響簡拼功能（注意，此功能只適用於朙月拼音系列方案，不適用於各類雙拼方案）
   # 本條補靪只在「小狼毫 0.9.30」、「鼠鬚管 0.9.25 」、「Rime-1.2」及更高的版本中起作用。
   "speller/algebra/@before 0": xform/^([b-df-hj-np-tv-z])$/$1_/
+  
+  # 引入 symbols.yaml 文件，開啓輸入特殊符號功能，如有需求，取消註釋並重新部署即可。在Rime自帶的symbols.yaml的基礎上增加了少量內容。
+  # 可輸入的具體內容參考symbols.yaml
+  "punctuator/import_preset": "luna_pinyin.extended/symbols"
+  "recognizer/patterns/punct": "^/[a-z]*$"

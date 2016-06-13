@@ -8,21 +8,20 @@ patch:
 
   preset_color_schemes:
     white:
-      name: white
-      author: based on (based on (Chongyu Zhu <lembacon@gmail.com>, based on 搜狗「简约白」), modified by orzFly), modified by oott123
+      name: "白学"
+      author: oott123 <rime@public.oott123.com>
       horizontal: true
       candidate_format: '%c %@ '
       corner_radius: 4
-      border_height: 8
-      border_width: 8
+      border_height: 7
+      border_width: 7
       font_point: 18
-      label_font_point: 14
-      label_color: 0x888888
+      label_font_point: 16
+      label_color: 0x929292
       text_color: 0x808080
-      hilited_text_color: 0x000000
-      candidate_text_color: 0x000000
+      candidate_text_color: 0x4d4d4d
       comment_text_color: 0x808080
-      back_color: 0xeeeeee
+      back_color: 0xf5f5f5
       hilited_candidate_label_color: 0xa0c98915
       hilited_candidate_text_color: 0xc98915
-      hilited_candidate_back_color: 0xeeeeee
+      hilited_candidate_back_color: 0xf5f5f5
