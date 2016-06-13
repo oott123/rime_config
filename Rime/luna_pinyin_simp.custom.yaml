@@ -57,7 +57,7 @@ patch:
   "engine/translators/@after 3": table_translator@emoji_translator
   emoji_translator:
     dictionary: emoji
-    enable_completion: true
+    enable_completion: false
 
   ## 明月拼音扩充词库设置 ##
   # via <https://github.com/zer4tul/RIME-Extend-Dict/blob/master/luna_pinyin.custom.yaml>
