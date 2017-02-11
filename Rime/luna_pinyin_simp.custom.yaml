@@ -54,10 +54,10 @@ patch:
     suffix: "'"
     tips: '「表情」'
 
-  "engine/translators/@after 3": table_translator@emoji_translator
-  emoji_translator:
-    dictionary: emoji
-    enable_completion: false
+  #"engine/translators/@after 3": table_translator@emoji_translator
+  #emoji_translator:
+  #  dictionary: emoji
+  #  enable_completion: false
 
   # 模糊音: en[g] in[g] z[h]
   "speller/algebra/@after 1": derive/([ei])n$/$1ng/
