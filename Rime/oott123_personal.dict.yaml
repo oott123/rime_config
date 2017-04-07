@@ -43,4 +43,6 @@ import_tables:
   - luna_pinyin.extended/luna_pinyin.extra_hanzi   #异体字，日文汉字
   - oott123_personal/jx3 # 剑三官方词库
   - oott123_personal/jx3_2013 # 剑三安史之乱所有NPC+物品名词库
+  - oott123_personal/hearthstone.cards.official # 炉石卡牌
+  - oott123_personal/hearthstone.cards.nickname # 炉石卡牌别称
 ...
