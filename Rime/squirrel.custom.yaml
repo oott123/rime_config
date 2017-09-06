@@ -33,3 +33,5 @@ patch:
       ascii_mode: true
     '2BUA8C4S2C.com.agilebits.onepassword4-helper':
       ascii_mode: true
+    'com.macromates.TextMate':
+      ascii_mode: true
