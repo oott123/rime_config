@@ -9,27 +9,14 @@ patch:
   # 载入自定义词库表
   "translator/dictionary": oott123_personal
 
+  "recognizer/patterns/punct": "^/[a-z]*$"
   punctuator:
     import_preset: "luna_pinyin.extended/symbols"
-    symbols:
-      '/cry': ['😂', '🌚', '😅']
-      '/yy': ['_(:з」∠)_', '∑(๑º口º๑)!!']
-    half_shape:
-      '{': ['「', '『', '〖', '｛']
-      '}': ['」', '』', '〗', '｝']
-      '[': {commit: '【'}
-      ']': {commit: '】'}
-      '`': ['`', '·', '・']
-      # 去掉一些常用符号的列表
-      '#': {commit: '#'}
-      '*': {commit: '*'}
-      '=': {commit: '='}
-      '/': {commit: '/'}
-      '~': {commit: '~'}
-      '@': {commit: '@'}
-      '|': {commit: '|'}
 
-  
+  # 反查（笔画和表情）输入依赖
+  "schema/dependencies":
+      - stroke
+      - emoji
   "recognizer/patterns/reverse_lookup": "u(b|e)[a-z]*'?$"
 
   # 笔画输入
@@ -54,10 +41,8 @@ patch:
     suffix: "'"
     tips: '「表情」'
 
-  #"engine/translators/@after 3": table_translator@emoji_translator
-  #emoji_translator:
-  #  dictionary: emoji
-  #  enable_completion: false
+  # 通过 opencc 触发的中文字符表情输入；需要 plum 包
+  __include: emoji_suggestion:/patch
 
   # 模糊音: en[g] in[g] z[h]
   "speller/algebra/@after 1": derive/([ei])n$/$1ng/
@@ -65,16 +50,6 @@ patch:
   # "speller/algebra/@after 3": derive/^([z])h/$1/
   # "speller/algebra/@after 4": derive/^([z])([^h])/$1h$2/
 
-  ## 明月拼音扩充词库设置 ##
-  # via <https://github.com/zer4tul/RIME-Extend-Dict/blob/master/luna_pinyin.custom.yaml>
-  # 載入朙月拼音擴充詞庫
-  # "translator/dictionary": luna_pinyin.extended
-  
   # 改寫拼寫運算，使得含西文的詞彙（位於 luna_pinyin.cn_en.dict.yaml 中）不影響簡拼功能（注意，此功能只適用於朙月拼音系列方案，不適用於各類雙拼方案）
   # 本條補靪只在「小狼毫 0.9.30」、「鼠鬚管 0.9.25 」、「Rime-1.2」及更高的版本中起作用。
   "speller/algebra/@before 0": xform/^([b-df-hj-np-tv-z])$/$1_/
-  
-  # 引入 symbols.yaml 文件，開啓輸入特殊符號功能，如有需求，取消註釋並重新部署即可。在Rime自帶的symbols.yaml的基礎上增加了少量內容。
-  # 可輸入的具體內容參考symbols.yaml
-  # "punctuator/import_preset": "luna_pinyin.extended/symbols"
-  "recognizer/patterns/punct": "^/[a-z]*$"
