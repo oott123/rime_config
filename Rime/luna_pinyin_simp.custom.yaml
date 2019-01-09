@@ -6,11 +6,13 @@ patch:
     Shift_L: commit_code
     Shift_R: commit_code
 
-  # 上下改左右，拒绝翻页
+  # 上下改左右；,. 改翻页
   key_binder:
     bindings:
       - {accept: Up, send: Left, when: composing}
       - {accept: Down, send: Right, when: composing}
+      - {accept: comma, send: Page_Up, when: composing}
+      - {accept: period, send: Page_Down, when: composing}
 
   # 载入自定义词库表
   "translator/dictionary": oott123_personal
