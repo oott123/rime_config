@@ -42,7 +42,7 @@ patch:
     tips: '「表情」'
 
   # 通过 opencc 触发的中文字符表情输入；需要 plum 包
-  __include: emoji_suggestion:/patch
+  # __include: emoji_suggestion:/patch
 
   # 模糊音: en[g] in[g] z[h]
   "speller/algebra/@after 1": derive/([ei])n$/$1ng/
