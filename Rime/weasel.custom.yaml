@@ -1,0 +1,32 @@
+patch:
+  "app_options/listary.exe":
+    ascii_mode: true
+  "preset_color_schemes/mspinyin":
+    back_color: 0xffffff
+    border_color: 0xcc7929
+    candidate_text_color: 0x000000
+    hilited_back_color: 0xFFFFFF
+    hilited_candidate_back_color: 0xcc7929
+    hilited_candidate_text_color: 0xffffff
+    hilited_text_color: 0x000000
+    name: mspinyin
+    text_color: 0x838383
+  "style/color_scheme": metroblue
+  "style/display_tray_icon": false
+  "style/font_face": "Microsoft Yahei"
+  "style/font_point": 14
+  "style/horizontal": true
+  "style/inline_preedit": true
+  "style/label_format": " %s "
+  "style/layout":
+    border_width: 1
+    candidate_spacing: 10
+    hilite_padding: 8
+    hilite_spacing: 8
+    margin_x: 8
+    margin_y: 8
+    min_height: 0
+    min_width: 160
+    round_corner: 0
+    spacing: 12
+  "style/preedit_type": composition
