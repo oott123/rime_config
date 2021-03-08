@@ -9,8 +9,8 @@ patch:
   # 上下改左右；,. 改翻页
   key_binder:
     bindings:
-      - {accept: Up, send: Left, when: composing}
-      - {accept: Down, send: Right, when: composing}
+      # - {accept: Up, send: Left, when: composing}
+      # - {accept: Down, send: Right, when: composing}
       - {accept: comma, send: Page_Up, when: composing}
       - {accept: period, send: Page_Down, when: composing}
 
