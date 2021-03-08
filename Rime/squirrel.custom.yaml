@@ -29,6 +29,8 @@ patch:
   app_options:
     'com.runningwithcrayons.Alfred-3':
       ascii_mode: true
+    'com.runningwithcrayons.Alfred':
+      ascii_mode: true
     'com.googlecode.iterm2':
       ascii_mode: true
     '2BUA8C4S2C.com.agilebits.onepassword4-helper':
